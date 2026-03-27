@@ -38,7 +38,7 @@ export function About() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 mb-16 text-base sm:text-lg text-foreground/75 leading-[1.8]"
         >
           <p>
-            Most designers pick a lane. I ended up with two: the banking app that millions of Cambodians open every morning, and the AI governance platforms shaping how eleven governments across Southeast Asia think about technology. One is intimate and daily. The other is structural and slow. Both demand the same thing — design that earns trust before it asks for it.
+            I'm a product designer at ABA Bank — working on the financial tools millions of Cambodians use every day. In my spare time, I contribute to AI governance research at SEA Observatory, helping translate complex policy into accessible design across Southeast Asia. One role is my profession. The other is a commitment I choose to keep.
           </p>
           <p>
             On Saturdays and Sundays, I'm in a classroom — by choice. Teaching UX and AI across Cambodia is how I stay honest about what the field actually needs. You learn differently when you have to explain it to someone who's never heard of it.
@@ -69,11 +69,11 @@ export function About() {
         >
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-sm text-muted-foreground w-16">Work</span>
-            {["ABA Bank", "SEA Observatory"].map(org => (
-              <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
-                {org}
-              </span>
-            ))}
+            <span className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">ABA Bank</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="text-sm text-muted-foreground w-16">Research</span>
+            <span className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">SEA Observatory</span>
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-sm text-muted-foreground w-16">Teaching</span>
