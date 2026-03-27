@@ -2,109 +2,105 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 export function Research() {
-  const containerVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
   };
 
   return (
-    <section id="research" className="py-24 lg:py-32 px-6 lg:px-8 bg-background scroll-mt-20">
+    <section id="research" className="py-20 lg:py-28 px-6 lg:px-8 bg-background scroll-mt-20">
       <div className="max-w-4xl mx-auto">
-        <motion.div 
-          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={containerVariants}
-          className="text-center mb-16"
+        <motion.div
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
+          className="mb-16"
         >
           <span className="text-xs font-semibold text-primary uppercase tracking-[0.15em]">
             Research
           </span>
-          <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-foreground font-semibold mb-4">
-            Where design meets governance.
+          <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-foreground font-semibold leading-[1.1] mb-4">
+            Where design meets governance
           </h2>
-          <p className="font-serif italic text-xl text-muted-foreground">
+          <p className="font-serif italic text-lg sm:text-xl text-muted-foreground">
             "Some of the most important design work happens before anyone opens Figma."
           </p>
         </motion.div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {/* Card 1 */}
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={containerVariants}
-            className="relative bg-card rounded-2xl p-8 lg:p-10 border border-border shadow-sm overflow-hidden"
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
+            className="relative bg-card rounded-2xl p-7 lg:p-10 border border-border shadow-sm overflow-hidden"
           >
-            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-primary" />
-            
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-l-2xl" />
+
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
               <div>
-                <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wider block mb-1">
+                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">
                   Academic Research
                 </span>
-                <span className="text-foreground font-medium">
-                  Kagawa University, Japan
-                </span>
+                <span className="text-foreground font-medium">Kagawa University, Japan</span>
               </div>
-              <span className="px-3 py-1 bg-white border border-border text-xs font-medium rounded-full w-fit">
+              <span className="px-3 py-1 bg-background border border-border text-xs font-medium rounded-full w-fit shrink-0">
                 2024
               </span>
             </div>
 
-            <h3 className="font-serif text-2xl lg:text-3xl font-bold text-foreground leading-tight mb-4">
+            <h3 className="font-serif text-xl lg:text-2xl font-bold text-foreground leading-snug mb-4">
               Exploring AI-Driven Solutions in Cross-Cultural UX Adaptation (Cambodia & Japan)
             </h3>
 
-            <p className="text-foreground/80 leading-relaxed mb-8">
-              How do AI systems need to adapt when the user changes culture? This research explored the intersection of generative AI and cross-cultural design, specifically examining how interfaces need to shift between Cambodian and Japanese user contexts — in language, expectation, trust, and interaction pattern.
+            <p className="text-foreground/75 leading-relaxed mb-7 text-sm sm:text-base">
+              How do AI systems need to adapt when the user changes culture? This research explored the intersection of generative AI and cross-cultural design — examining how interfaces need to shift between Cambodian and Japanese user contexts in language, expectation, trust, and interaction pattern.
             </p>
 
-            <div className="flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-border/60">
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-border/60">
               <div className="text-sm text-muted-foreground">
                 Supervisor: <span className="font-medium text-foreground">Kitamura-sensei</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs text-primary font-medium bg-primary/5 px-2 py-1 rounded">Generative AI</span>
-                <span className="text-xs text-primary font-medium bg-primary/5 px-2 py-1 rounded">Cross-Cultural UX</span>
-                <span className="text-xs text-primary font-medium bg-primary/5 px-2 py-1 rounded">HCI</span>
+                <span className="text-xs text-primary font-medium bg-primary/8 px-2.5 py-1 rounded-md">Generative AI</span>
+                <span className="text-xs text-primary font-medium bg-primary/8 px-2.5 py-1 rounded-md">Cross-Cultural UX</span>
+                <span className="text-xs text-primary font-medium bg-primary/8 px-2.5 py-1 rounded-md">HCI</span>
               </div>
             </div>
           </motion.div>
 
           {/* Card 2 */}
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={containerVariants}
-            className="relative bg-card rounded-2xl p-8 lg:p-10 border border-border shadow-sm overflow-hidden"
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
+            className="relative bg-card rounded-2xl p-7 lg:p-10 border border-border shadow-sm overflow-hidden"
           >
-            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-primary/40" />
-            
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary/35 rounded-l-2xl" />
+
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
               <div>
-                <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wider block mb-1">
+                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">
                   Contributor
                 </span>
-                <span className="text-foreground font-medium">
-                  AI Safety Asia
-                </span>
+                <span className="text-foreground font-medium">AI Safety Asia</span>
               </div>
-              <span className="px-3 py-1 bg-white border border-border text-xs font-medium rounded-full w-fit">
+              <span className="px-3 py-1 bg-background border border-border text-xs font-medium rounded-full w-fit shrink-0">
                 2025
               </span>
             </div>
 
-            <h3 className="font-serif text-2xl lg:text-3xl font-bold text-foreground leading-tight mb-4">
+            <h3 className="font-serif text-xl lg:text-2xl font-bold text-foreground leading-snug mb-4">
               AI Safety Asia — 2025 Annual Report Contributor
             </h3>
 
-            <p className="text-foreground/80 leading-relaxed mb-8">
+            <p className="text-foreground/75 leading-relaxed mb-7 text-sm sm:text-base">
               Contributed research insights on how AI governance frameworks affect public-interest design decisions in Southeast Asia. Part of a broader effort to make AI safety conversations accessible and actionable for the region.
             </p>
 
-            <div className="flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-border/60">
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-border/60">
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs text-muted-foreground font-medium border border-border px-2 py-1 rounded">AI Safety</span>
-                <span className="text-xs text-muted-foreground font-medium border border-border px-2 py-1 rounded">Governance</span>
-                <span className="text-xs text-muted-foreground font-medium border border-border px-2 py-1 rounded">Southeast Asia</span>
+                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">AI Safety</span>
+                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Governance</span>
+                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Southeast Asia</span>
               </div>
-              <a 
-                href="https://aisafety.asia" 
-                target="_blank" 
+              <a
+                href="https://aisafety.asia"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
