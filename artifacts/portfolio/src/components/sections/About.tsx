@@ -40,9 +40,14 @@ export function About() {
           <p>
             I'm a product designer based in Phnom Penh, Cambodia — designing at ABA Bank and contributing to AI governance at SEA Observatory, alongside teams from Google AI, the World Economic Forum, and the United Nations.
           </p>
-          <p>
-            My work lives at the edge of two worlds: the financial systems that millions of Cambodians depend on, and the public-interest AI platforms shaping how governments across Southeast Asia make decisions. In both, the challenge is always the same — make the complex feel simple, and make the simple feel right. On weekends, I take that same challenge into the classroom, teaching UX and AI to the next generation of Cambodian designers.
-          </p>
+          <div className="flex flex-col gap-5">
+            <p>
+              My work lives at the edge of two worlds: the financial systems that millions of Cambodians depend on, and the public-interest AI platforms shaping how governments across Southeast Asia make decisions. In both, the challenge is always the same — make the complex feel simple, and make the simple feel right.
+            </p>
+            <p className="text-foreground/60 text-base italic border-l-2 border-primary/40 pl-4">
+              On weekends, I take that same challenge into the classroom — teaching UX and AI to the next generation of Cambodian designers.
+            </p>
+          </div>
         </motion.div>
 
         {/* Stats strip */}
