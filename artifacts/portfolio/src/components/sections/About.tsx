@@ -69,11 +69,11 @@ export function About() {
         >
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-sm text-muted-foreground w-16">Work</span>
-            <span className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">ABA Bank</span>
-          </div>
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="text-sm text-muted-foreground w-16">Research</span>
-            <span className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">SEA Observatory</span>
+            {["ABA Bank", "SEA Observatory"].map(org => (
+              <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
+                {org}
+              </span>
+            ))}
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-sm text-muted-foreground w-16">Teaching</span>
