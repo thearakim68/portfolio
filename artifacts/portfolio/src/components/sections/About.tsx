@@ -58,10 +58,10 @@ export function About() {
   };
 
   const stats = [
-    { value: "5+", label: "Years of\nprofessional experience" },
-    { value: "2", label: "Countries\nworked in" },
-    { value: "600+", label: "Students taught\ndesign & AI" },
-    { value: "981", label: "Claps on\nmost-read article" }
+    { value: "5+", label: "Years designing" },
+    { value: "2", label: "Countries" },
+    { value: "600+", label: "Students taught" },
+    { value: "981", label: "Article claps" }
   ];
 
   return (
@@ -101,19 +101,27 @@ export function About() {
           </div>
         </motion.div>
 
-        {/* Stats strip */}
+        {/* Stats strip — editorial, no boxes */}
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12"
+          className="grid grid-cols-2 sm:grid-cols-4 mb-14"
         >
           {stats.map((stat, idx) => (
-            <div key={idx} className="bg-card border border-border/60 rounded-xl px-6 py-7 flex flex-col relative overflow-hidden">
-              {/* Terracotta top accent */}
-              <span className="absolute top-0 left-0 right-0 h-[3px] bg-primary/60 rounded-t-xl" />
-              <span className="font-serif text-4xl lg:text-5xl font-bold text-primary mb-2 leading-none">
+            <div
+              key={idx}
+              className={[
+                "flex flex-col py-6 px-2 sm:px-6",
+                // Left border: always for right-column items (1,3); desktop-only for idx 2 (left col on mobile)
+                idx === 1 || idx === 3 ? "border-l border-border/50" : "",
+                idx === 2 ? "sm:border-l border-border/50" : "",
+                // Bottom border: only on mobile for top-row items (0,1)
+                idx < 2 ? "border-b sm:border-b-0 border-border/50" : "",
+              ].join(" ")}
+            >
+              <span className="font-serif text-5xl lg:text-6xl font-bold text-primary leading-none mb-3 tracking-tight">
                 {stat.value}
               </span>
-              <span className="text-xs text-muted-foreground leading-snug whitespace-pre-line uppercase tracking-wide">
+              <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-[0.12em]">
                 {stat.label}
               </span>
             </div>
