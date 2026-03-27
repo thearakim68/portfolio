@@ -94,10 +94,10 @@ export function Work() {
       {/* Section header */}
       <div className="max-w-6xl mx-auto px-6 lg:px-8 pt-20 lg:pt-28 pb-14">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ type: "spring", stiffness: 75, damping: 20, mass: 1 }}
         >
           <span className="text-xs font-semibold text-primary uppercase tracking-[0.15em]">Work</span>
           <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl text-card-foreground font-semibold leading-[1.1]">
@@ -164,10 +164,10 @@ export function Work() {
                 className={idx === 0 ? "pb-20" : "py-20"}
               >
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 22 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ type: "spring", stiffness: 80, damping: 20 }}
                 >
                   {/* Number + role */}
                   <div className="flex items-center gap-3 mb-4">
@@ -231,10 +231,11 @@ export function Work() {
         {projects.map((project, idx) => (
           <motion.article
             key={project.id}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6 }}
+            transition={{ type: "spring", stiffness: 80, damping: 20, delay: idx * 0.08 }}
+            whileHover={{ y: -4, transition: { type: "spring", stiffness: 350, damping: 28 } }}
           >
             {/* Number + role header */}
             <div className="flex items-center gap-3 mb-3">

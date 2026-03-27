@@ -1,15 +1,22 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { HeroVisual } from "./HeroVisual";
+import { MagneticElement } from "../ui/MagneticElement";
 
 export function Hero() {
   const fadeUp = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 28 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.18, duration: 0.75, ease: [0.21, 0.47, 0.32, 0.98] }
-    })
+      transition: {
+        delay: i * 0.14,
+        type: "spring" as const,
+        stiffness: 80,
+        damping: 20,
+        mass: 1,
+      },
+    }),
   };
 
   return (
@@ -17,19 +24,22 @@ export function Hero() {
       id="top"
       className="relative flex flex-col justify-center min-h-screen pt-24 pb-20 px-6 lg:px-8 bg-background overflow-hidden"
     >
-      {/* Subtle dot pattern */}
+      {/* Dot pattern */}
       <div
         className="absolute inset-0 z-0 opacity-[0.025] pointer-events-none"
-        style={{ backgroundImage: "radial-gradient(circle at 2px 2px, #C85438 1px, transparent 0)", backgroundSize: "32px 32px" }}
+        style={{
+          backgroundImage: "radial-gradient(circle at 2px 2px, #C85438 1px, transparent 0)",
+          backgroundSize: "32px 32px",
+        }}
       />
 
       <div className="max-w-6xl mx-auto w-full z-10">
         <div className="flex flex-col md:flex-row items-center md:items-center gap-8 lg:gap-14">
 
-          {/* Animated visual — top on mobile, right on desktop */}
+          {/* Visual — top on mobile, right on desktop */}
           <motion.div
             custom={1} initial="hidden" animate="visible" variants={fadeUp}
-            className="w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] md:w-[430px] md:h-[430px] lg:w-[490px] lg:h-[490px] shrink-0 md:order-2"
+            className="w-[300px] h-[330px] sm:w-[360px] sm:h-[396px] md:w-[430px] md:h-[473px] lg:w-[490px] lg:h-[539px] shrink-0 md:order-2"
           >
             <HeroVisual />
           </motion.div>
@@ -61,30 +71,37 @@ export function Hero() {
               custom={5} initial="hidden" animate="visible" variants={fadeUp}
               className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto"
             >
-              <a
-                href="#work"
-                className="px-6 py-3.5 bg-primary text-primary-foreground font-medium rounded-xl shadow-lg shadow-primary/25 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2 group"
-              >
-                View My Work
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a
-                href="#writing"
-                className="px-6 py-3.5 bg-transparent border border-border text-foreground font-medium rounded-xl hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Read My Writing
-              </a>
+              {/* Primary CTA — magnetic on desktop */}
+              <MagneticElement className="w-full sm:w-auto">
+                <a
+                  href="#work"
+                  className="w-full sm:w-auto px-6 py-3.5 bg-primary text-primary-foreground font-medium rounded-xl shadow-lg shadow-primary/25 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2 group"
+                >
+                  View My Work
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </a>
+              </MagneticElement>
+
+              {/* Secondary CTA — magnetic on desktop */}
+              <MagneticElement className="w-full sm:w-auto">
+                <a
+                  href="#writing"
+                  className="w-full sm:w-auto px-6 py-3.5 bg-transparent border border-border text-foreground font-medium rounded-xl hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  Read My Writing
+                </a>
+              </MagneticElement>
             </motion.div>
 
           </div>
         </div>
       </div>
 
-      {/* Scroll hint — desktop only to avoid mobile overlap with buttons */}
+      {/* Scroll hint — desktop only */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.4, duration: 1 }}
+        transition={{ delay: 2.6, type: "spring", stiffness: 60, damping: 20 }}
         className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-1.5 text-muted-foreground"
       >
         <span className="text-xs font-medium tracking-wide">Scroll to explore</span>
