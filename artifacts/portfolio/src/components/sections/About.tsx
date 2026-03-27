@@ -16,7 +16,7 @@ function MarqueeChip({ label }: { label: string }) {
     return () => window.removeEventListener("resize", check);
   }, [label]);
 
-  const duration = `${Math.max(label.length * 0.45, 6)}s`;
+  const duration = `${Math.max(label.length * 0.28, 4)}s`;
 
   return (
     /* Outer chip: fixed width on mobile, natural width on sm+ */
