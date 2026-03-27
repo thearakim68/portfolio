@@ -104,14 +104,16 @@ export function About() {
         {/* Stats strip */}
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border/40 rounded-2xl overflow-hidden mb-12"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12"
         >
           {stats.map((stat, idx) => (
-            <div key={idx} className="bg-background px-6 py-8 flex flex-col">
-              <span className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-2 leading-none">
+            <div key={idx} className="bg-card border border-border/60 rounded-xl px-6 py-7 flex flex-col relative overflow-hidden">
+              {/* Terracotta top accent */}
+              <span className="absolute top-0 left-0 right-0 h-[3px] bg-primary/60 rounded-t-xl" />
+              <span className="font-serif text-4xl lg:text-5xl font-bold text-primary mb-2 leading-none">
                 {stat.value}
               </span>
-              <span className="text-sm text-muted-foreground leading-snug whitespace-pre-line">
+              <span className="text-xs text-muted-foreground leading-snug whitespace-pre-line uppercase tracking-wide">
                 {stat.label}
               </span>
             </div>
