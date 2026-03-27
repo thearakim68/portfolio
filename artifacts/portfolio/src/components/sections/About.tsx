@@ -38,10 +38,10 @@ export function About() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 mb-16 text-base sm:text-lg text-foreground/75 leading-[1.8]"
         >
           <p>
-            I'm a product designer based in Phnom Penh — designing at ABA Bank and contributing to AI governance at SEA Observatory, alongside teams from Google AI, the World Economic Forum, and the United Nations.
+            Most designers pick a lane. I ended up with two: the banking app that millions of Cambodians open every morning, and the AI governance platforms shaping how eleven governments across Southeast Asia think about technology. One is intimate and daily. The other is structural and slow. Both demand the same thing — design that earns trust before it asks for it.
           </p>
           <p>
-            On weekends, I teach UX/UI and AI to students across Cambodia. Design only moves forward when the knowledge inside it moves too.
+            On Saturdays and Sundays, I'm in a classroom — by choice. Teaching UX and AI across Cambodia is how I stay honest about what the field actually needs. You learn differently when you have to explain it to someone who's never heard of it.
           </p>
         </motion.div>
 
