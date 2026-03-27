@@ -38,10 +38,10 @@ export function About() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 mb-16 text-base sm:text-lg text-foreground/75 leading-[1.8]"
         >
           <p>
-            Complexity isn't a problem I avoid — it's what I work with. At ABA Bank, I design the business banking tools that companies across Cambodia depend on every day. In my spare time, I contribute to AI governance research at SEA Observatory, helping make policy frameworks legible for the people they're supposed to protect.
+            I'm a product designer based in Phnom Penh, Cambodia — designing at ABA Bank and contributing to AI governance at SEA Observatory, alongside teams from Google AI, the World Economic Forum, and the United Nations.
           </p>
           <p>
-            On weekends, I teach UX and AI to students across Cambodia. It keeps me honest. You understand a discipline differently when you have to explain it from the beginning.
+            My work lives at the edge of two worlds: the financial systems that millions of Cambodians depend on, and the public-interest AI platforms shaping how governments across Southeast Asia make decisions. In both, the challenge is always the same — make the complex feel simple, and make the simple feel right.
           </p>
         </motion.div>
 
