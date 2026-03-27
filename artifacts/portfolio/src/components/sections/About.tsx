@@ -58,10 +58,10 @@ export function About() {
   };
 
   const stats = [
-    { value: "5+", label: "Years designing" },
-    { value: "2", label: "Countries" },
-    { value: "600+", label: "Students taught" },
-    { value: "981", label: "Article claps" }
+    { value: "5+", label: "Years of professional experience" },
+    { value: "2", label: "Countries worked in" },
+    { value: "600+", label: "Students taught design & AI" },
+    { value: "981", label: "Claps on most-read article" }
   ];
 
   return (
