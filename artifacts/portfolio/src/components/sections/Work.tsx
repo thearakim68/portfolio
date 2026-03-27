@@ -24,9 +24,9 @@ const projects = [
     tags: ["FinTech", "Mobile UX", "Internet Banking", "Web Portal"],
     description: "Business banking is a different problem than consumer banking — the stakes are higher, the workflows are more complex, and the users are pressed for time. I led UX and UI design across four products: Mobile Banking for Business, Internet Banking for Business, a public-facing landing page, and the web portal. Each required mapping distinct user journeys, balancing business logic with clear interaction patterns, and maintaining consistency across channels.",
     outcome: "End-to-end design coverage across mobile, web, and marketing touchpoints for one of Cambodia's largest and most trusted financial institutions.",
-    link: "https://www.ababank.com/en/aba-mobile-app/aba-mobile-overview/",
-    linkText: "View ABA Mobile",
-    image: "https://api.microlink.io/?url=https%3A%2F%2Fwww.ababank.com%2Fen%2Faba-mobile-app%2Faba-mobile-overview%2F&screenshot=true&meta=false&embed=screenshot.url",
+    link: "https://www.ababank.com/aba-business/",
+    linkText: "View ABA Business",
+    image: "https://api.microlink.io/?url=https%3A%2F%2Fwww.ababank.com%2Faba-business%2F&screenshot=true&meta=false&embed=screenshot.url",
     imageFallback: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1400&h=1050&fit=crop&auto=format"
   },
   {
