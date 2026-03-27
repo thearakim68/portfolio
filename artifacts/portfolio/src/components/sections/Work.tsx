@@ -55,6 +55,8 @@ export function Work() {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    // Only run sticky-image observer on desktop (≥1024px)
+    if (typeof window !== "undefined" && window.innerWidth < 1024) return;
     const observers: IntersectionObserver[] = [];
     itemRefs.current.forEach((el, idx) => {
       if (!el) return;

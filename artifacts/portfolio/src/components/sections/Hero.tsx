@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex flex-col justify-center min-h-dvh pt-24 pb-16 px-6 lg:px-8 bg-background overflow-hidden"
+      className="relative flex flex-col justify-center min-h-screen pt-24 pb-16 px-6 lg:px-8 bg-background overflow-hidden"
     >
       {/* Subtle dot pattern */}
       <div

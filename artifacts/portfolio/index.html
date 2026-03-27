@@ -9,7 +9,8 @@
     <meta name="description" content="Kim Theara is a Product Designer and AI Researcher based in Phnom Penh, Cambodia. Currently designing at ABA Bank and contributing to AI governance at SEA Observatory alongside teams from Google AI, WEF, and the UN." />
     <meta name="keywords" content="Kim Theara, Product Designer Cambodia, UX Designer Cambodia, AI Researcher Southeast Asia, UX UI Phnom Penh, Human-Centred AI Design, SEA Observatory, ABA Bank UX, Generative AI instructor, design educator Cambodia" />
     <meta name="author" content="Kim Theara" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#FAFAF8" />
 
     <!-- Geographic Meta -->
     <meta name="geo.region" content="KH" />
@@ -22,6 +23,9 @@
     <meta property="og:title" content="Kim Theara — Product Designer · AI Researcher · Educator" />
     <meta property="og:description" content="Designing human experiences at the intersection of AI, governance, and the people technology is supposed to serve. Based in Phnom Penh, Cambodia." />
     <meta property="og:image" content="https://www.seaobservatory.org/_next/image?url=%2Fteam%2Fkim_theara.jpg&w=1200&q=90" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kim Theara — Product Designer and AI Researcher" />
     <meta property="og:url" content="https://kimtheara.com" />
     <meta property="og:site_name" content="Kim Theara" />
     <meta property="og:locale" content="en_US" />
@@ -33,9 +37,11 @@
     <meta name="twitter:title" content="Kim Theara — Product Designer · AI Researcher · Educator" />
     <meta name="twitter:description" content="Designing human experiences at the intersection of AI, governance, and the people technology is supposed to serve." />
     <meta name="twitter:image" content="https://www.seaobservatory.org/_next/image?url=%2Fteam%2Fkim_theara.jpg&w=1200&q=90" />
+    <meta name="twitter:creator" content="@thearakim68" />
 
-    <!-- Canonical -->
+    <!-- Canonical & Sitemap -->
     <link rel="canonical" href="https://kimtheara.com" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -50,11 +56,14 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://kimtheara.com/#person",
       "name": "Kim Theara",
+      "givenName": "Theara",
+      "familyName": "Kim",
       "url": "https://kimtheara.com",
       "image": "https://www.seaobservatory.org/_next/image?url=%2Fteam%2Fkim_theara.jpg&w=1200&q=90",
       "jobTitle": "Product Designer & AI Researcher",
-      "description": "Product Designer and AI Researcher specialising in human-centred AI design for Southeast Asia.",
+      "description": "Product Designer and AI Researcher specialising in human-centred AI design for Southeast Asia. Contributing to AI governance policy across 11 ASEAN jurisdictions.",
       "email": "thearakim68@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -62,7 +71,11 @@
         "addressCountry": "KH"
       },
       "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "Kagawa University", "address": { "@type": "PostalAddress", "addressCountry": "JP" } }
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Kagawa University",
+          "address": { "@type": "PostalAddress", "addressCountry": "JP" }
+        }
       ],
       "worksFor": [
         { "@type": "Organization", "name": "ABA Bank", "url": "https://www.ababank.com" },
@@ -73,7 +86,115 @@
         "https://medium.com/@thearakim68",
         "https://www.seaobservatory.org/team"
       ],
-      "knowsAbout": ["UX Design", "UI Design", "Product Design", "Generative AI", "AI Governance", "Human-Centred Design", "FinTech", "Cross-Cultural UX", "Southeast Asia", "Design Education"]
+      "knowsAbout": [
+        "UX Design", "UI Design", "Product Design", "Generative AI",
+        "AI Governance", "Human-Centred Design", "FinTech",
+        "Cross-Cultural UX", "Southeast Asia", "Design Education"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://kimtheara.com/#website",
+      "url": "https://kimtheara.com",
+      "name": "Kim Theara — Portfolio",
+      "description": "Personal portfolio of Kim Theara, Product Designer and AI Researcher based in Phnom Penh, Cambodia.",
+      "author": { "@id": "https://kimtheara.com/#person" },
+      "inLanguage": "en",
+      "copyrightYear": 2025
+    }
+    </script>
+
+    <!-- Structured Data: ProfilePage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "url": "https://kimtheara.com",
+      "name": "Kim Theara — Product Designer · AI Researcher · Educator",
+      "mainEntity": { "@id": "https://kimtheara.com/#person" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kimtheara.com" }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Kim Theara do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kim Theara is a Product Designer and AI Researcher based in Phnom Penh, Cambodia. He leads UX design at ABA Bank — one of Cambodia's largest banks — and contributes to AI governance research at SEA Observatory alongside Google AI, the World Economic Forum, the United Nations, and the World Bank, covering 11 ASEAN jurisdictions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Kim Theara based?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kim Theara is based in Phnom Penh, Cambodia. He has also conducted AI research at Kagawa University in Japan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What organisations has Kim Theara worked with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kim Theara has worked with ABA Bank (Cambodia's leading digital bank), SEA Observatory (alongside Google AI, WEF, the United Nations, and the World Bank), Kirirom Digital Institute, and Unseentra. He also teaches AI and design across Cambodia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What has Kim Theara written?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kim Theara writes about design and AI on Medium. His article on typography earned 981 claps and is widely shared among designers. He explores topics including human-centred AI design, Southeast Asian design education, and UX for emerging markets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Kim Theara?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can reach Kim Theara via email at thearakim68@gmail.com or connect on LinkedIn at linkedin.com/in/kimtheara-productdesign-ai-expert/."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Article (Medium writing) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Typography Secrets Every Designer Should Know",
+      "author": { "@id": "https://kimtheara.com/#person" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Medium",
+        "url": "https://medium.com"
+      },
+      "url": "https://medium.com/@thearakim68",
+      "description": "A deep dive into typography principles for digital product designers — 981 claps and widely shared across the design community.",
+      "inLanguage": "en",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Product Designers, UX Designers"
+      }
     }
     </script>
   </head>
