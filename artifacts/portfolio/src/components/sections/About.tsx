@@ -1,4 +1,44 @@
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+
+function MarqueeChip({ label }: { label: string }) {
+  const containerRef = useRef<HTMLSpanElement>(null);
+  const textRef = useRef<HTMLSpanElement>(null);
+  const [overflow, setOverflow] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      if (containerRef.current && textRef.current) {
+        setOverflow(textRef.current.scrollWidth > containerRef.current.clientWidth + 1);
+      }
+    };
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, [label]);
+
+  return (
+    <span
+      ref={containerRef}
+      className="relative px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground overflow-hidden inline-flex items-center max-w-[140px] sm:max-w-none"
+    >
+      <span
+        ref={textRef}
+        className="whitespace-nowrap"
+        style={overflow ? {
+          animation: `chip-marquee ${label.length * 0.22}s linear infinite`,
+          paddingRight: "2.5rem",
+        } : {}}
+      >
+        {label}
+        {overflow && <span aria-hidden className="pl-10">{label}</span>}
+      </span>
+      {overflow && (
+        <span className="absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-card to-transparent pointer-events-none rounded-r-lg" />
+      )}
+    </span>
+  );
+}
 
 export function About() {
   const fadeUp = {
@@ -70,23 +110,19 @@ export function About() {
         {/* Affiliations */}
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
-          className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-x-6"
+          className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-x-6"
         >
           <div className="flex items-center gap-3">
             <span className="text-sm text-muted-foreground w-16 shrink-0">Work</span>
             {["ABA Bank", "SEA Observatory"].map(org => (
-              <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
-                {org}
-              </span>
+              <MarqueeChip key={org} label={org} />
             ))}
           </div>
-          <span className="text-border/60 select-none hidden lg:inline">|</span>
+          <span className="text-border/60 select-none hidden sm:inline">|</span>
           <div className="flex items-center gap-3">
             <span className="text-sm text-muted-foreground w-16 shrink-0">Teaching</span>
             {["IT Academy STEP", "Future.bit Academy"].map(org => (
-              <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
-                {org}
-              </span>
+              <MarqueeChip key={org} label={org} />
             ))}
           </div>
         </motion.div>
