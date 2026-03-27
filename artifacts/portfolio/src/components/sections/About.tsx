@@ -58,10 +58,10 @@ export function About() {
   };
 
   const stats = [
-    { value: "5+", label: "Years of professional experience" },
-    { value: "2", label: "Countries worked in" },
-    { value: "600+", label: "Students taught design & AI" },
-    { value: "981", label: "Claps on most-read article" }
+    { value: "5+", label: "Years of\nprofessional experience" },
+    { value: "2", label: "Countries\nworked in" },
+    { value: "600+", label: "Students taught\ndesign & AI" },
+    { value: "981", label: "Claps on\nmost-read article" }
   ];
 
   return (
@@ -122,7 +122,7 @@ export function About() {
                 <span className="font-serif text-5xl lg:text-6xl font-bold text-primary leading-none mb-3 tracking-tight relative">
                   {stat.value}
                 </span>
-                <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-[0.12em]">
+                <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-[0.12em] whitespace-pre-line leading-relaxed">
                   {stat.label}
                 </span>
               </div>
