@@ -20,7 +20,7 @@ export function Community() {
       desc: "Introducing design thinking and Figma to the next generation of Cambodian designers."
     },
     {
-      year: "2024",
+      year: "Dec 2025",
       title: "Guest Speaker",
       org: "PSE — Pour un Sourire d'enfant",
       desc: "Spoke to students about design thinking, front-end work, and how UX design helps solve real problems — alongside peers covering web development and career preparation. A simple but meaningful session."
