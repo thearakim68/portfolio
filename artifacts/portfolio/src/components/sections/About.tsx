@@ -61,7 +61,7 @@ export function About() {
     { value: "5+", label: "Years of\nprofessional experience" },
     { value: "2", label: "Countries\nworked in" },
     { value: "600+", label: "Students taught\ndesign & AI" },
-    { value: "28K+", label: "Readers reached\nthrough writing" }
+    { value: "28K+", label: "Article\nreaders" }
   ];
 
   return (
