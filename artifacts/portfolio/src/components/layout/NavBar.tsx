@@ -32,7 +32,7 @@ export function NavBar() {
   const navLinks = [
     { name: "Work", href: "#work" },
     { name: "Teaching", href: "#community" },
-    { name: "Article", href: "#writing" },
+    { name: "Writing", href: "#writing" },
     { name: "Research", href: "#research" },
     { name: "Connect", href: "#connect" },
   ];
