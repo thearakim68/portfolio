@@ -101,31 +101,33 @@ export function About() {
           </div>
         </motion.div>
 
-        {/* Stats strip — editorial, no boxes */}
+        {/* Stats strip — editorial with subtle background */}
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
-          className="grid grid-cols-2 sm:grid-cols-4 mb-14"
+          className="mb-14 rounded-2xl border border-border/50 bg-card overflow-hidden"
         >
-          {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className={[
-                "flex flex-col py-6 px-2 sm:px-6",
-                // Left border: always for right-column items (1,3); desktop-only for idx 2 (left col on mobile)
-                idx === 1 || idx === 3 ? "border-l border-border/50" : "",
-                idx === 2 ? "sm:border-l border-border/50" : "",
-                // Bottom border: only on mobile for top-row items (0,1)
-                idx < 2 ? "border-b sm:border-b-0 border-border/50" : "",
-              ].join(" ")}
-            >
-              <span className="font-serif text-5xl lg:text-6xl font-bold text-primary leading-none mb-3 tracking-tight">
-                {stat.value}
-              </span>
-              <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-[0.12em]">
-                {stat.label}
-              </span>
-            </div>
-          ))}
+          <div className="grid grid-cols-2 sm:grid-cols-4">
+            {stats.map((stat, idx) => (
+              <div
+                key={idx}
+                className={[
+                  "flex flex-col py-8 px-6 sm:px-8 relative",
+                  idx === 1 || idx === 3 ? "border-l border-border/50" : "",
+                  idx === 2 ? "sm:border-l border-border/50" : "",
+                  idx < 2 ? "border-b sm:border-b-0 border-border/50" : "",
+                ].join(" ")}
+              >
+                {/* Subtle terracotta glow behind the number */}
+                <span className="absolute top-4 left-4 w-10 h-10 bg-primary/8 rounded-full blur-xl pointer-events-none" />
+                <span className="font-serif text-5xl lg:text-6xl font-bold text-primary leading-none mb-3 tracking-tight relative">
+                  {stat.value}
+                </span>
+                <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-[0.12em]">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Affiliations */}
