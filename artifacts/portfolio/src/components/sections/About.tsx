@@ -2,58 +2,51 @@ import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 function MarqueeChip({ label }: { label: string }) {
-  const containerRef = useRef<HTMLSpanElement>(null);
-  const singleRef = useRef<HTMLSpanElement>(null);
+  const clipRef = useRef<HTMLSpanElement>(null);
+  const measureRef = useRef<HTMLSpanElement>(null);
   const [overflow, setOverflow] = useState(false);
 
   useEffect(() => {
     const check = () => {
-      if (!containerRef.current || !singleRef.current) return;
-      // measure inner text width vs container inner width (minus horizontal padding = 32px)
-      const available = containerRef.current.clientWidth - 32;
-      setOverflow(singleRef.current.offsetWidth > available);
+      if (!clipRef.current || !measureRef.current) return;
+      setOverflow(measureRef.current.scrollWidth > clipRef.current.clientWidth);
     };
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, [label]);
 
-  // duration scales with text length — longer text scrolls longer so speed stays constant
   const duration = `${Math.max(label.length * 0.45, 6)}s`;
 
   return (
-    <span
-      ref={containerRef}
-      style={{ maxWidth: "140px", overflow: "hidden" }}
-      className="relative px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground inline-flex items-center sm:max-w-none"
-    >
-      {/* Measure span — always rendered, invisible when overflow active */}
-      <span
-        ref={singleRef}
-        className="whitespace-nowrap"
-        style={{ position: overflow ? "absolute" : "static", visibility: overflow ? "hidden" : "visible", pointerEvents: "none" }}
-      >
-        {label}
-      </span>
-
-      {/* Scrolling span — only shown when overflowing */}
-      {overflow && (
-        <span
-          className="whitespace-nowrap flex"
-          style={{ animation: `chip-marquee ${duration} linear infinite` }}
-        >
-          <span className="pr-10">{label}</span>
-          <span aria-hidden className="pr-10">{label}</span>
+    /* Outer chip: fixed width on mobile, natural width on sm+ */
+    <span className="inline-flex items-center px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground w-[118px] sm:w-auto shrink-0">
+      {/* Inner clip zone — this is what actually hides overflow */}
+      <span ref={clipRef} className="relative flex-1 overflow-hidden" style={{ minWidth: 0 }}>
+        {/* Hidden measurement node */}
+        <span ref={measureRef} className="absolute invisible whitespace-nowrap pointer-events-none">
+          {label}
         </span>
-      )}
 
-      {/* Fade overlay */}
-      {overflow && (
-        <span
-          className="absolute right-0 top-0 h-full w-8 pointer-events-none rounded-r-lg"
-          style={{ background: "linear-gradient(to left, var(--color-card), transparent)" }}
-        />
-      )}
+        {overflow ? (
+          <>
+            <span
+              className="flex whitespace-nowrap"
+              style={{ animation: `chip-marquee ${duration} linear infinite` }}
+            >
+              <span className="pr-10">{label}</span>
+              <span aria-hidden className="pr-10">{label}</span>
+            </span>
+            {/* Fade only on the right edge of the clip zone */}
+            <span
+              className="absolute right-0 top-0 h-full w-6 pointer-events-none"
+              style={{ background: "linear-gradient(to left, var(--color-card), transparent)" }}
+            />
+          </>
+        ) : (
+          <span className="whitespace-nowrap">{label}</span>
+        )}
+      </span>
     </span>
   );
 }
