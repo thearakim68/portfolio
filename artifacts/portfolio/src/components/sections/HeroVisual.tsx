@@ -73,6 +73,21 @@ const TERRACOTTA = "#C85438";
 export function HeroVisual() {
   return (
     <div className="relative w-full h-full flex flex-col items-center justify-center select-none">
+
+      {/* ── Stat callout — HTML overlay so text is always readable ── */}
+      <motion.div
+        initial={{ opacity: 0, y: 4 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="absolute z-10 bg-white/95 backdrop-blur-sm rounded-lg border border-primary/15 shadow-sm pointer-events-none"
+        style={{ top: "2%", left: "7%", padding: "8px 11px" }}
+      >
+        <p className="text-[9px] font-bold text-primary uppercase tracking-[0.1em] mb-2">ASEAN REACH</p>
+        <p className="text-[9px] text-foreground leading-[1.6]"><span className="font-bold">11</span>{"  jurisdictions tracked"}</p>
+        <p className="text-[9px] text-foreground leading-[1.6]"><span className="font-bold">317+</span>{"  policy resources"}</p>
+        <p className="text-[9px] text-foreground leading-[1.6]"><span className="font-bold">3,000+</span>{"  students taught"}</p>
+      </motion.div>
+
       <svg
         viewBox={`0 0 ${W} ${H}`}
         width="100%"
@@ -232,34 +247,6 @@ export function HeroVisual() {
           );
         })}
 
-        {/* ── Stat callout box — top-left (clear of all city labels) ── */}
-        <motion.g
-          transform="translate(8, 10)"
-          initial={{ opacity: 0, y: 4 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-        >
-          <rect
-            width={163} height={62} rx={6}
-            fill="rgba(250,250,248,0.94)"
-            stroke="rgba(200,84,56,0.18)" strokeWidth={0.8}
-          />
-          <text
-            x={10} y={18} fontSize={7} fontWeight={700}
-            fill={TERRACOTTA} fontFamily="Inter, sans-serif" letterSpacing="0.08em"
-          >
-            ASEAN REACH
-          </text>
-          <text x={10} y={31} fontSize={7} fill="#111111" fontFamily="Inter, sans-serif">
-            <tspan fontWeight="700">11</tspan>{"  jurisdictions tracked"}
-          </text>
-          <text x={10} y={43} fontSize={7} fill="#111111" fontFamily="Inter, sans-serif">
-            <tspan fontWeight="700">317+</tspan>{"  policy resources"}
-          </text>
-          <text x={10} y={55} fontSize={7} fill="#111111" fontFamily="Inter, sans-serif">
-            <tspan fontWeight="700">3,000+</tspan>{"  students taught"}
-          </text>
-        </motion.g>
       </svg>
     </div>
   );

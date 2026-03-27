@@ -91,6 +91,22 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
 
+### `artifacts/portfolio` (`@workspace/portfolio`)
+
+Kim Theara personal portfolio — Product Designer, AI Researcher, Educator. Pure static React + Vite + TypeScript + Tailwind + Framer Motion. No backend.
+
+**Design system:** Warm white `#FAFAF8` bg, cream `#F2EDE7` alternating, terracotta `#C85438` accent, Fraunces serif + Inter body.
+
+**Key components:**
+- `src/components/sections/Hero.tsx` — Hero layout; map top on mobile, right on desktop. Map container: `w-[300px] sm:w-[360px] md:w-[430px] lg:w-[490px]`. Scroll hint `hidden md:flex` (mobile-safe, prevents button overlap).
+- `src/components/sections/HeroVisual.tsx` — SVG Southeast Asia map (viewBox 520×580, projection lon 90–148 / lat -12–40). ASEAN REACH callout is HTML overlay (not SVG) at `top:2% left:7%` for readable text at all screen sizes.
+- `src/components/sections/Work.tsx` — Desktop: sticky browser-chrome mockup left + editorial scroll-driven project list right. Mobile: stacked article cards with browser chrome mockup + terracotta left-border outcome callout. IntersectionObserver gated to `window.innerWidth >= 1024` only.
+- `public/robots.txt` — Explicitly allows 14+ crawlers including GPTBot, ClaudeBot, Perplexity.
+- `public/sitemap.xml` — 5 section URLs.
+- `index.html` — 6 JSON-LD schemas (Person, WebSite, ProfilePage, Organization, FAQPage with 8 Q&As, Article), `<noscript>` fallback, comprehensive meta tags.
+
+**Port:** reads `PORT` env var. Dev server: `pnpm --filter @workspace/portfolio run dev`.
+
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
