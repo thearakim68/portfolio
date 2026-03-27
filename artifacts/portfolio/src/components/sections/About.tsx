@@ -3,38 +3,56 @@ import { motion } from "framer-motion";
 
 function MarqueeChip({ label }: { label: string }) {
   const containerRef = useRef<HTMLSpanElement>(null);
-  const textRef = useRef<HTMLSpanElement>(null);
+  const singleRef = useRef<HTMLSpanElement>(null);
   const [overflow, setOverflow] = useState(false);
 
   useEffect(() => {
     const check = () => {
-      if (containerRef.current && textRef.current) {
-        setOverflow(textRef.current.scrollWidth > containerRef.current.clientWidth + 1);
-      }
+      if (!containerRef.current || !singleRef.current) return;
+      // measure inner text width vs container inner width (minus horizontal padding = 32px)
+      const available = containerRef.current.clientWidth - 32;
+      setOverflow(singleRef.current.offsetWidth > available);
     };
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, [label]);
 
+  // duration scales with text length — longer text scrolls longer so speed stays constant
+  const duration = `${Math.max(label.length * 0.45, 6)}s`;
+
   return (
     <span
       ref={containerRef}
-      className="relative px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground overflow-hidden inline-flex items-center max-w-[140px] sm:max-w-none"
+      style={{ maxWidth: "140px", overflow: "hidden" }}
+      className="relative px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground inline-flex items-center sm:max-w-none"
     >
+      {/* Measure span — always rendered, invisible when overflow active */}
       <span
-        ref={textRef}
+        ref={singleRef}
         className="whitespace-nowrap"
-        style={overflow ? {
-          animation: `chip-marquee ${label.length * 0.22}s linear infinite`,
-          paddingRight: "2.5rem",
-        } : {}}
+        style={{ position: overflow ? "absolute" : "static", visibility: overflow ? "hidden" : "visible", pointerEvents: "none" }}
       >
         {label}
-        {overflow && <span aria-hidden className="pl-10">{label}</span>}
       </span>
+
+      {/* Scrolling span — only shown when overflowing */}
       {overflow && (
-        <span className="absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-card to-transparent pointer-events-none rounded-r-lg" />
+        <span
+          className="whitespace-nowrap flex"
+          style={{ animation: `chip-marquee ${duration} linear infinite` }}
+        >
+          <span className="pr-10">{label}</span>
+          <span aria-hidden className="pr-10">{label}</span>
+        </span>
+      )}
+
+      {/* Fade overlay */}
+      {overflow && (
+        <span
+          className="absolute right-0 top-0 h-full w-8 pointer-events-none rounded-r-lg"
+          style={{ background: "linear-gradient(to left, var(--color-card), transparent)" }}
+        />
       )}
     </span>
   );
