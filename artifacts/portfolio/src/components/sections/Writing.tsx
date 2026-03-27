@@ -15,7 +15,7 @@ export function Writing() {
           className="mb-14"
         >
           <span className="text-xs font-semibold text-primary uppercase tracking-[0.15em]">
-            Writing
+            Article
           </span>
           <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-card-foreground font-semibold leading-[1.1] mb-3">
             I write to understand

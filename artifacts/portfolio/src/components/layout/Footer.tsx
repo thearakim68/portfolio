@@ -3,7 +3,7 @@ import { ArrowUpRight, ArrowUp } from "lucide-react";
 const footerLinks = [
   { name: "Work", href: "#work" },
   { name: "Teaching", href: "#community" },
-  { name: "Writing", href: "#writing" },
+  { name: "Article", href: "#writing" },
   { name: "Research", href: "#research" },
   { name: "Connect", href: "#connect" },
 ];
