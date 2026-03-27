@@ -6,19 +6,6 @@ const projects = [
   {
     id: 1,
     num: "01",
-    role: "Human-Centred AI Design",
-    org: "SEA Observatory",
-    tags: ["AI Governance", "UX Research", "Public Interest", "Southeast Asia"],
-    description: "AI governance policy is dense, technical, and built for specialists — not for the 11 countries it's supposed to govern. My role was to close that gap: turning the Observatory's frameworks, AI Assistant, and GovSim modules into clear, navigable experiences that non-specialist users could actually trust and act on.",
-    outcome: "A live platform across 11 ASEAN jurisdictions tracking 317+ policy resources — built alongside alumni from Google AI, the World Economic Forum, the United Nations, and the World Bank.",
-    link: "https://www.seaobservatory.org",
-    linkText: "Visit seaobservatory.org",
-    image: "https://api.microlink.io/?url=https%3A%2F%2Fwww.seaobservatory.org&screenshot=true&meta=false&embed=screenshot.url",
-    imageFallback: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&h=1050&fit=crop&auto=format"
-  },
-  {
-    id: 2,
-    num: "02",
     role: "UX & UI Designer",
     org: "ABA Bank, Cambodia",
     tags: ["FinTech", "Mobile UX", "Internet Banking", "Web Portal"],
@@ -28,6 +15,19 @@ const projects = [
     linkText: "View ABA Business",
     image: "https://api.microlink.io/?url=https%3A%2F%2Fwww.ababank.com%2Faba-business%2F&screenshot=true&meta=false&embed=screenshot.url",
     imageFallback: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1400&h=1050&fit=crop&auto=format"
+  },
+  {
+    id: 2,
+    num: "02",
+    role: "Human-Centred AI Design",
+    org: "SEA Observatory",
+    tags: ["AI Governance", "UX Research", "Public Interest", "Southeast Asia"],
+    description: "AI governance policy is dense, technical, and built for specialists — not for the 11 countries it's supposed to govern. My role was to close that gap: turning the Observatory's frameworks, AI Assistant, and GovSim modules into clear, navigable experiences that non-specialist users could actually trust and act on.",
+    outcome: "A live platform across 11 ASEAN jurisdictions tracking 317+ policy resources — built alongside alumni from Google AI, the World Economic Forum, the United Nations, and the World Bank.",
+    link: "https://www.seaobservatory.org",
+    linkText: "Visit seaobservatory.org",
+    image: "https://api.microlink.io/?url=https%3A%2F%2Fwww.seaobservatory.org&screenshot=true&meta=false&embed=screenshot.url",
+    imageFallback: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&h=1050&fit=crop&auto=format"
   },
   {
     id: 3,
