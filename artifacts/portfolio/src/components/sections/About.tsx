@@ -38,10 +38,10 @@ export function About() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 mb-16 text-base sm:text-lg text-foreground/75 leading-[1.8]"
         >
           <p>
-            I'm a product designer at ABA Bank — working on the financial tools millions of Cambodians use every day. In my spare time, I contribute to AI governance research at SEA Observatory, helping translate complex policy into accessible design across Southeast Asia. One role is my profession. The other is a commitment I choose to keep.
+            Complexity isn't a problem I avoid — it's what I work with. At ABA Bank, I design the business banking tools that companies across Cambodia depend on every day. In my spare time, I contribute to AI governance research at SEA Observatory, helping make policy frameworks legible for the people they're supposed to protect.
           </p>
           <p>
-            On Saturdays and Sundays, I'm in a classroom — by choice. Teaching UX and AI across Cambodia is how I stay honest about what the field actually needs. You learn differently when you have to explain it to someone who's never heard of it.
+            On weekends, I teach UX and AI to students across Cambodia. It keeps me honest. You understand a discipline differently when you have to explain it from the beginning.
           </p>
         </motion.div>
 

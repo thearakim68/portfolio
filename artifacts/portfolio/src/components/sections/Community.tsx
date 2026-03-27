@@ -11,25 +11,25 @@ export function Community() {
       year: "2025",
       title: "GenAI UX & UI Instructor",
       org: "IT Academy STEP Cambodia",
-      desc: "Teaching generative AI tools and UX principles to design students."
+      desc: "Teaching students to use generative AI tools before most institutions know what to teach. The curriculum had to be practical from day one — real tools, real workflows, real design problems."
     },
     {
       year: "2023 – Present",
       title: "UX & UI Instructor",
       org: "Future.bit Academy",
-      desc: "Introducing design thinking and Figma to the next generation of Cambodian designers."
+      desc: "Building design foundations for the next generation of Cambodian designers — user research, design thinking, Figma, and the discipline of putting people before pixels."
     },
     {
       year: "Dec 2025",
       title: "Guest Speaker",
       org: "PSE — Pour un Sourire d'enfant",
-      desc: "Spoke to students about design thinking, front-end work, and how UX design helps solve real problems — alongside peers covering web development and career preparation. A simple but meaningful session."
+      desc: "Spoke to students about design thinking, front-end work, and how UX solves real problems — alongside peers covering web development and career preparation. One of those rooms where you leave more energised than when you walked in."
     },
     {
       year: "Ongoing",
       title: "Director, Individual Committee",
       org: "JCI Cambodia",
-      desc: "Community leadership and youth development across Cambodia."
+      desc: "Developing programs that connect young Cambodians with professional skills, civic leadership, and a community that takes growth seriously."
     }
   ];
 

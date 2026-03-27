@@ -18,7 +18,7 @@ export function Connect() {
         </h2>
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-          Whether you're looking for a designer, a collaborator, a researcher, or a speaker — I'd love to hear what you're working on.
+          If you're building something where design, technology, and people actually matter — I'd like to hear about it. Consulting, collaboration, research, or a conversation. All welcome.
         </p>
 
         <a
