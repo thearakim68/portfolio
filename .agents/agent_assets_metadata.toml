@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "QcyytnEZ1qXfQw91PtttE"
+uri = "file://attached_assets/theara-portfolio-structure.md"
+type = "text"
+title = "Kim Theara — Portfolio Website Blueprint"
