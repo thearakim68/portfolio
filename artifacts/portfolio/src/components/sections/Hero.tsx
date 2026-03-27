@@ -5,16 +5,14 @@ import { MagneticElement } from "../ui/MagneticElement";
 
 export function Hero() {
   const fadeUp = {
-    hidden: { opacity: 0, y: 28 },
+    hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.14,
-        type: "spring" as const,
-        stiffness: 80,
-        damping: 20,
-        mass: 1,
+        delay: i * 0.1,
+        duration: 0.55,
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     }),
   };
