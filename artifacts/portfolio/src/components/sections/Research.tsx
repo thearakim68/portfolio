@@ -75,9 +75,9 @@ export function Research() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
               <div>
                 <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">
-                  Website & Dashboard Designer
+                  Human-Centred AI Design
                 </span>
-                <span className="text-foreground font-medium">AI Safety Asia</span>
+                <span className="text-foreground font-medium">SEA Observatory · AI Safety Asia</span>
               </div>
               <span className="px-3 py-1 bg-background border border-border text-xs font-medium rounded-full w-fit shrink-0">
                 2025
@@ -85,19 +85,18 @@ export function Research() {
             </div>
 
             <h3 className="font-serif text-xl lg:text-2xl font-bold text-foreground leading-snug mb-4">
-              Designing the face of Southeast Asia's AI safety movement
+              Translating governance complexity into public-interest user experiences
             </h3>
 
             <p className="text-foreground/75 leading-relaxed mb-7 text-sm sm:text-base">
-              Designed the website and key dashboards for AI Safety Asia — the organisation behind Southeast Asia's leading AI governance capacity-building work. Their 2025 flagship report, <em>AI Safety Governance: The Southeast Asian Way</em>, was co-published with the Brookings Institution and covered AI policy across 11 countries. The goal: make complex governance work accessible, navigable, and trusted by the region's policymakers and public alike.
+              Working across SEA Observatory and AI Safety Asia, my role is human-centred AI design — making governance frameworks legible, navigable, and genuinely useful for non-specialist users across Southeast Asia. AI Safety Asia's 2025 flagship work, <em>AI Safety Governance: The Southeast Asian Way</em>, was co-published with the Brookings Institution across 11 countries. The design challenge: when policy is the product, clarity is the craft.
             </p>
 
             <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-border/60">
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Web Design</span>
-                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Dashboard UI</span>
-                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">AI Governance</span>
-                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Southeast Asia</span>
+                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Human-Centred AI</span>
+                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Design</span>
+                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">SEA</span>
               </div>
               <a
                 href="https://www.aisafety.asia"

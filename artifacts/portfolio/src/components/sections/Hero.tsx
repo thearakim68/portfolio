@@ -47,23 +47,6 @@ export function Hero() {
           {/* Text content */}
           <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:order-1">
 
-            {/* Portrait avatar */}
-            <motion.div
-              custom={1.5} initial="hidden" animate="visible" variants={fadeUp}
-              className="mb-5"
-            >
-              <div className="relative inline-block">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden ring-2 ring-primary/30 ring-offset-2 ring-offset-background shadow-md">
-                  <img
-                    src="https://www.seaobservatory.org/_next/image?url=%2Fteam%2Fkim_theara.jpg&w=384&q=75"
-                    alt="Kim Theara"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <span className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 border-2 border-background rounded-full" title="Available for work" />
-              </div>
-            </motion.div>
-
             <motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mb-4">
               <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-[0.15em]">
                 Product Designer · AI Researcher · Educator
