@@ -6,7 +6,6 @@ const CR = "#F2EDE7";
 const BK = "#111111";
 const MU = "#8A857D";
 
-const ROLES = ["Design", "Research", "Educate"] as const;
 const CYCLE_MS = 4200;
 
 const fv = {
@@ -360,33 +359,6 @@ export function HeroVisual() {
         </AnimatePresence>
       </div>
 
-      {/* Role tabs + progress bar */}
-      <div className="flex flex-col gap-2 pt-3 px-1">
-        <div className="flex gap-5">
-          {ROLES.map((label, idx) => (
-            <button key={label} onClick={() => setActive(idx)}
-              className={`text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] transition-colors duration-300 cursor-pointer ${
-                idx === active ? "text-primary" : "text-muted-foreground/40 hover:text-muted-foreground/65"
-              }`}
-            >{label}</button>
-          ))}
-        </div>
-
-        <div className="flex gap-2">
-          {ROLES.map((_, idx) => (
-            <div key={idx} className={`flex-1 h-[2px] rounded-full overflow-hidden ${idx < active ? "bg-primary" : "bg-border/50"}`}>
-              {idx === active && (
-                <motion.div
-                  key={active}
-                  className="h-full w-full bg-primary rounded-full origin-left"
-                  initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
-                  transition={{ duration: reduced ? 0 : CYCLE_MS / 1000, ease: "linear" }}
-                />
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }

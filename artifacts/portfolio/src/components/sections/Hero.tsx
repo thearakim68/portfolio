@@ -39,7 +39,7 @@ export function Hero() {
           {/* Visual — top on mobile, right on desktop */}
           <motion.div
             custom={1} initial="hidden" animate="visible" variants={fadeUp}
-            className="w-[300px] h-[330px] sm:w-[360px] sm:h-[396px] md:w-[430px] md:h-[473px] lg:w-[490px] lg:h-[539px] shrink-0 md:order-2"
+            className="w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] md:w-[430px] md:h-[430px] lg:w-[490px] lg:h-[490px] shrink-0 md:order-2"
           >
             <HeroVisual />
           </motion.div>
