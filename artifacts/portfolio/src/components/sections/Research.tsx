@@ -75,7 +75,7 @@ export function Research() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
               <div>
                 <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">
-                  Contributor
+                  Website & Dashboard Designer
                 </span>
                 <span className="text-foreground font-medium">AI Safety Asia</span>
               </div>
@@ -85,26 +85,27 @@ export function Research() {
             </div>
 
             <h3 className="font-serif text-xl lg:text-2xl font-bold text-foreground leading-snug mb-4">
-              AI Safety Asia — 2025 Annual Report Contributor
+              Designing the face of Southeast Asia's AI safety movement
             </h3>
 
             <p className="text-foreground/75 leading-relaxed mb-7 text-sm sm:text-base">
-              Contributed research insights on how AI governance frameworks affect public-interest design decisions in Southeast Asia. Part of a broader effort to make AI safety conversations accessible and actionable for the region.
+              Designed the website and key dashboards for AI Safety Asia — the organisation behind Southeast Asia's leading AI governance capacity-building work. Their 2025 flagship report, <em>AI Safety Governance: The Southeast Asian Way</em>, was co-published with the Brookings Institution and covered AI policy across 11 countries. The goal: make complex governance work accessible, navigable, and trusted by the region's policymakers and public alike.
             </p>
 
             <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-border/60">
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">AI Safety</span>
-                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Governance</span>
+                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Web Design</span>
+                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Dashboard UI</span>
+                <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">AI Governance</span>
                 <span className="text-xs text-muted-foreground font-medium border border-border px-2.5 py-1 rounded-md">Southeast Asia</span>
               </div>
               <a
-                href="https://aisafety.asia"
+                href="https://www.aisafety.asia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
-                Visit AI Safety Asia <ArrowUpRight size={14} />
+                Visit aisafety.asia <ArrowUpRight size={14} />
               </a>
             </div>
           </motion.div>

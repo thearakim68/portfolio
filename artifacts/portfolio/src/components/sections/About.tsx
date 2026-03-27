@@ -9,7 +9,7 @@ export function About() {
   const stats = [
     { value: "5+", label: "Years of\nprofessional experience" },
     { value: "2", label: "Countries\nworked in" },
-    { value: "3,000+", label: "Students taught\ndesign & AI" },
+    { value: "600+", label: "Students taught\ndesign & AI" },
     { value: "981", label: "Claps on\nmost-read article" }
   ];
 
@@ -60,6 +60,26 @@ export function About() {
               </span>
             </div>
           ))}
+        </motion.div>
+
+        {/* Education */}
+        <motion.div
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
+          className="mb-12"
+        >
+          <span className="text-xs font-semibold text-primary uppercase tracking-[0.15em] block mb-5">Education</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-card border border-border/60 rounded-xl px-6 py-5">
+              <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider block mb-1.5">In Progress · 2024 – Present</span>
+              <div className="font-serif text-lg font-bold text-foreground leading-snug">MBA — Global Innovation Management</div>
+              <div className="text-sm text-foreground/70 mt-1">National University of Management (NUM), Phnom Penh</div>
+            </div>
+            <div className="bg-card border border-border/60 rounded-xl px-6 py-5">
+              <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider block mb-1.5">Bachelor's Degree · Class of 2022</span>
+              <div className="font-serif text-lg font-bold text-foreground leading-snug">Bachelor of Science — Software Engineering</div>
+              <div className="text-sm text-foreground/70 mt-1">Kirirom Institute of Technology, Cambodia</div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Affiliations */}

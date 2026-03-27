@@ -54,7 +54,7 @@ export function Community() {
           <div className="flex-1 lg:max-w-md">
             <div className="space-y-5 text-base sm:text-lg text-foreground/75 leading-relaxed mb-12">
               <p>
-                Since 2023, I've been teaching UX design and generative AI across Cambodia — in academies, universities, and community classrooms. Some of the most meaningful moments of my career have happened in front of a whiteboard, not a screen.
+                Since 2023, I've been teaching Digital Marketing and UX/UI Design across Cambodia — in academies, universities, and community classrooms. Over 600 students and counting. Some of the most meaningful moments of my career have happened in front of a whiteboard, not a screen.
               </p>
               <p>
                 Design education in Southeast Asia still has wide gaps. I don't think that changes by waiting.

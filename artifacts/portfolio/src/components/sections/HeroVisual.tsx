@@ -235,7 +235,7 @@ function ResearchFrame({ reduced }: { reduced: boolean }) {
       <motion.g initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
         <rect x={72} y={356} width={256} height={22} rx={5} fill="rgba(200,84,56,0.06)" />
         <text x={200} y={371} textAnchor="middle" fontSize={8} fontWeight="600" fill={T} fontFamily="Inter, sans-serif">
-          11 jurisdictions · 317+ policies · 3,000+ students
+          11 jurisdictions · 317+ policies · 600+ students taught
         </text>
       </motion.g>
     </svg>
