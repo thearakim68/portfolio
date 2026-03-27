@@ -14,7 +14,8 @@ const projects = [
     note: "Part of a team that includes alumni from Google AI, the World Economic Forum, the United Nations, and the World Bank.",
     link: "https://www.seaobservatory.org",
     linkText: "Visit seaobservatory.org",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&h=1050&fit=crop&auto=format"
+    image: "https://api.microlink.io/?url=https%3A%2F%2Fwww.seaobservatory.org&screenshot=true&meta=false&embed=screenshot.url",
+    imageFallback: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&h=1050&fit=crop&auto=format"
   },
   {
     id: 2,
@@ -24,7 +25,8 @@ const projects = [
     challenge: "Banking apps in Cambodia serve users across a wide range of digital literacy. When money is involved, confusion is not an option. Clarity isn't a nice-to-have — it is the product.",
     action: "Led UX design for mobile banking features. Conducted stakeholder interviews and user testing sessions, facilitated design workshops to define pain points, and created high-fidelity prototypes that balanced regulatory requirements with genuine usability.",
     outcome: "Improved key flows for one of Cambodia's largest and most trusted financial institutions — serving hundreds of thousands of daily users.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1400&h=1050&fit=crop&auto=format"
+    image: "https://api.microlink.io/?url=https%3A%2F%2Fwww.ababank.com&screenshot=true&meta=false&embed=screenshot.url",
+    imageFallback: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1400&h=1050&fit=crop&auto=format"
   },
   {
     id: 3,
@@ -99,7 +101,8 @@ export function Work() {
                   key={p.id}
                   src={p.image}
                   alt={p.org}
-                  className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${
+                  onError={(e) => { if (p.imageFallback) (e.currentTarget as HTMLImageElement).src = p.imageFallback; }}
+                  className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ${
                     idx === activeIndex ? "opacity-100" : "opacity-0"
                   }`}
                 />
@@ -210,7 +213,8 @@ export function Work() {
               <img
                 src={project.image}
                 alt={project.org}
-                className="w-full h-full object-cover object-center"
+                onError={(e) => { if (project.imageFallback) (e.currentTarget as HTMLImageElement).src = project.imageFallback; }}
+                className="w-full h-full object-cover object-top"
               />
             </div>
 

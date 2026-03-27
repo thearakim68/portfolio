@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
+import { HeroVisual } from "./HeroVisual";
 
 export function Hero() {
   const fadeUp = {
@@ -23,25 +24,18 @@ export function Hero() {
       />
 
       <div className="max-w-6xl mx-auto w-full z-10">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-10 lg:gap-20">
+        <div className="flex flex-col md:flex-row items-center md:items-center gap-10 lg:gap-16">
 
-          {/* Photo — top on mobile, right on desktop */}
+          {/* Animated visual — top on mobile, right on desktop */}
           <motion.div
             custom={1} initial="hidden" animate="visible" variants={fadeUp}
-            className="w-44 h-44 sm:w-56 sm:h-56 md:w-[340px] md:h-[420px] lg:w-[380px] lg:h-[470px] shrink-0 md:order-2"
+            className="w-72 h-72 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] lg:w-[440px] lg:h-[440px] shrink-0 md:order-2"
           >
-            <div className="w-full h-full rounded-full md:rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10 ring-4 ring-border/30">
-              <div className="absolute inset-0 bg-[#C85438]/5 mix-blend-multiply z-10 pointer-events-none rounded-full md:rounded-[2rem]" />
-              <img
-                src="https://www.seaobservatory.org/_next/image?url=%2Fteam%2Fkim_theara.jpg&w=3840&q=75"
-                alt="Kim Theara Portrait"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
+            <HeroVisual />
           </motion.div>
 
-          {/* Text content — below photo on mobile, left on desktop */}
-          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:order-1 md:pt-8">
+          {/* Text content */}
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:order-1">
 
             <motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mb-5">
               <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-[0.15em]">
@@ -58,20 +52,13 @@ export function Hero() {
 
             <motion.p
               custom={4} initial="hidden" animate="visible" variants={fadeUp}
-              className="font-serif italic text-lg sm:text-xl lg:text-2xl text-foreground/80 max-w-lg leading-relaxed mb-6"
+              className="font-serif italic text-lg sm:text-xl lg:text-2xl text-foreground/75 max-w-lg leading-relaxed mb-10"
             >
               "Designing human experiences at the intersection of AI, governance, and the people technology is supposed to serve."
             </motion.p>
 
             <motion.div
               custom={5} initial="hidden" animate="visible" variants={fadeUp}
-              className="flex items-center gap-2 text-sm text-muted-foreground mb-10"
-            >
-              <span>📍 Phnom Penh, Cambodia</span>
-            </motion.div>
-
-            <motion.div
-              custom={6} initial="hidden" animate="visible" variants={fadeUp}
               className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto"
             >
               <a
