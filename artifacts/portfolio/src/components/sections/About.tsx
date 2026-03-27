@@ -38,10 +38,10 @@ export function About() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 mb-16 text-base sm:text-lg text-foreground/75 leading-[1.8]"
         >
           <p>
-            I'm a product designer based in Phnom Penh, Cambodia — currently designing at ABA Bank and contributing to AI governance at SEA Observatory, alongside teams from Google AI, the World Economic Forum, and the United Nations.
+            I'm a product designer based in Phnom Penh — designing at ABA Bank and contributing to AI governance at SEA Observatory, alongside teams from Google AI, the World Economic Forum, and the United Nations.
           </p>
           <p>
-            My work lives at the edge of two worlds: the financial systems that millions of Cambodians depend on, and the public-interest AI platforms shaping how governments across Southeast Asia make decisions. In both, the challenge is always the same — make the complex feel simple, and make the simple feel right.
+            On weekends, I teach UX/UI and AI to students across Cambodia. Design only moves forward when the knowledge inside it moves too.
           </p>
         </motion.div>
 
@@ -65,14 +65,24 @@ export function About() {
         {/* Affiliations */}
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
-          className="flex flex-wrap items-center gap-3"
+          className="flex flex-col gap-4"
         >
-          <span className="text-sm text-muted-foreground mr-2">Currently at</span>
-          {["ABA Bank", "SEA Observatory"].map(org => (
-            <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
-              {org}
-            </span>
-          ))}
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="text-sm text-muted-foreground w-16">Work</span>
+            {["ABA Bank", "SEA Observatory"].map(org => (
+              <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
+                {org}
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="text-sm text-muted-foreground w-16">Teaching</span>
+            {["IT Academy STEP", "Future.bit Academy"].map(org => (
+              <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
+                {org}
+              </span>
+            ))}
+          </div>
         </motion.div>
 
       </div>
