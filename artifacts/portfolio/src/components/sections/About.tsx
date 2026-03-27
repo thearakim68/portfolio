@@ -38,7 +38,7 @@ export function About() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 mb-16 text-base sm:text-lg text-foreground/75 leading-[1.8]"
         >
           <p>
-            I'm a product designer based in Phnom Penh, Cambodia — designing at ABA Bank and contributing to AI governance at SEA Observatory, alongside teams from Google AI, the World Economic Forum, and the United Nations.
+            I'm a product designer based in Phnom Penh, Cambodia — designing at ABA Bank and, in my free time, contributing to AI governance at SEA Observatory, alongside teams from Google AI, the World Economic Forum, and the United Nations.
           </p>
           <div className="flex flex-col gap-5">
             <p>
