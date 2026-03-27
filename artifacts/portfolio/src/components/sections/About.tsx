@@ -70,24 +70,21 @@ export function About() {
         {/* Affiliations */}
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
-          className="flex flex-col gap-4"
+          className="flex flex-wrap items-center gap-x-6 gap-y-3"
         >
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="text-sm text-muted-foreground w-16">Work</span>
-            {["ABA Bank", "SEA Observatory"].map(org => (
-              <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
-                {org}
-              </span>
-            ))}
-          </div>
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="text-sm text-muted-foreground w-16">Teaching</span>
-            {["IT Academy STEP", "Future.bit Academy"].map(org => (
-              <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
-                {org}
-              </span>
-            ))}
-          </div>
+          <span className="text-sm text-muted-foreground">Work</span>
+          {["ABA Bank", "SEA Observatory"].map(org => (
+            <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
+              {org}
+            </span>
+          ))}
+          <span className="text-border/60 select-none hidden sm:inline">|</span>
+          <span className="text-sm text-muted-foreground">Teaching</span>
+          {["IT Academy STEP", "Future.bit Academy"].map(org => (
+            <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
+              {org}
+            </span>
+          ))}
         </motion.div>
 
       </div>
