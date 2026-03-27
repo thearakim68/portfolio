@@ -67,8 +67,8 @@ export function About() {
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
           className="flex flex-wrap items-center gap-3"
         >
-          <span className="text-sm text-muted-foreground mr-2">Currently working with</span>
-          {["ABA Bank", "SEA Observatory", "IT Academy STEP", "Future.bit Academy"].map(org => (
+          <span className="text-sm text-muted-foreground mr-2">Currently at</span>
+          {["ABA Bank", "SEA Observatory"].map(org => (
             <span key={org} className="px-4 py-2 bg-card border border-border/60 rounded-lg text-sm font-medium text-foreground">
               {org}
             </span>
