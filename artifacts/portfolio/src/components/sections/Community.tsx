@@ -21,9 +21,9 @@ export function Community() {
     },
     {
       year: "2024",
-      title: "Guest Educator",
-      org: "PSE (Phare Ponleu Selpak)",
-      desc: "Delivered STEM design sessions for female students. Received a handmade STEM Guide Manual as a thank-you — one of the most meaningful days on record."
+      title: "Guest Speaker",
+      org: "PSE — Pour un Sourire d'enfant",
+      desc: "Spoke to students about design thinking, front-end work, and how UX design helps solve real problems — alongside peers covering web development and career preparation. A simple but meaningful session."
     },
     {
       year: "Ongoing",
