@@ -1,0 +1,6 @@
+packages:
+  "framer-motion": "For elegant, scroll-triggered page transitions and animations"
+images: []
+notes:
+  - "Pure frontend portfolio application. No backend required."
+  - "All data is hardcoded according to the detailed blueprint."
