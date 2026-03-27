@@ -88,7 +88,7 @@ export function Hero() {
                   href="#writing"
                   className="w-full sm:w-auto px-6 py-3.5 bg-transparent border border-border text-foreground font-medium rounded-xl hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  Read My Writing
+                  My Article
                 </a>
               </MagneticElement>
             </motion.div>
