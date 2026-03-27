@@ -33,15 +33,15 @@ export function Writing() {
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
           className="group block bg-background rounded-2xl border border-border/50 overflow-hidden shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 mb-8"
         >
-          <div className="flex flex-col md:flex-row">
-            <div className="w-full md:w-[42%] h-56 md:h-auto overflow-hidden shrink-0">
+          <div className="flex flex-col lg:flex-row">
+            <div className="w-full lg:w-[40%] h-56 sm:h-64 lg:h-auto overflow-hidden shrink-0">
               <img
                 src="https://miro.medium.com/v2/resize:fill:640:428/1*tq9rwGs5cT4Rxu3-GwhmwQ.png"
                 alt="Typography Guide in User Interface Design"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="w-full p-7 lg:p-10 flex flex-col justify-center">
+            <div className="w-full p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 <span className="px-2.5 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-md">Most Read</span>
                 <span className="text-sm text-muted-foreground">Feb 7, 2024</span>

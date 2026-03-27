@@ -227,7 +227,7 @@ export function Work() {
       </div>
 
       {/* ── MOBILE: stacked cards ── */}
-      <div className="lg:hidden max-w-xl mx-auto px-5 pb-20 space-y-16">
+      <div className="lg:hidden max-w-2xl md:max-w-3xl mx-auto px-5 md:px-8 pb-20 space-y-16">
         {projects.map((project, idx) => (
           <motion.article
             key={project.id}

@@ -34,18 +34,18 @@ export function Hero() {
       />
 
       <div className="max-w-6xl mx-auto w-full z-10">
-        <div className="flex flex-col md:flex-row items-center md:items-center gap-8 lg:gap-14">
+        <div className="flex flex-col lg:flex-row items-center lg:items-center gap-10 lg:gap-14">
 
           {/* Visual — top on mobile, right on desktop */}
           <motion.div
             custom={1} initial="hidden" animate="visible" variants={fadeUp}
-            className="w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] md:w-[430px] md:h-[430px] lg:w-[490px] lg:h-[490px] shrink-0 md:order-2"
+            className="w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] lg:w-[490px] lg:h-[490px] shrink-0 lg:order-2"
           >
             <HeroVisual />
           </motion.div>
 
           {/* Text content */}
-          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:order-1">
+          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left lg:order-1">
 
             <motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mb-4">
               <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-[0.15em]">
