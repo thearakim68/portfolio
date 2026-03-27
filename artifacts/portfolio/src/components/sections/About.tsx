@@ -104,14 +104,14 @@ export function About() {
         {/* Stats strip — editorial with subtle background */}
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
-          className="mb-14 rounded-2xl border border-border/50 bg-card overflow-hidden"
+          className="mb-14 rounded-2xl border border-border/30 bg-foreground/[0.02] overflow-hidden"
         >
           <div className="grid grid-cols-2 sm:grid-cols-4">
             {stats.map((stat, idx) => (
               <div
                 key={idx}
                 className={[
-                  "flex flex-col py-8 px-6 sm:px-8 relative",
+                  "flex flex-col items-center text-center py-8 px-6 sm:px-8 relative",
                   idx === 1 || idx === 3 ? "border-l border-border/50" : "",
                   idx === 2 ? "sm:border-l border-border/50" : "",
                   idx < 2 ? "border-b sm:border-b-0 border-border/50" : "",
