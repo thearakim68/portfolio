@@ -76,9 +76,11 @@ export function Work() {
     const observers: IntersectionObserver[] = [];
     itemRefs.current.forEach((el, idx) => {
       if (!el) return;
+      // rootMargin creates a narrow detection band at ~35-65% from viewport top
+      // so the image only switches when the user is clearly reading that project
       const obs = new IntersectionObserver(
         ([entry]) => { if (entry.isIntersecting) setActiveIndex(idx); },
-        { threshold: 0.35 }
+        { threshold: 0, rootMargin: "-35% 0px -55% 0px" }
       );
       obs.observe(el);
       observers.push(obs);
