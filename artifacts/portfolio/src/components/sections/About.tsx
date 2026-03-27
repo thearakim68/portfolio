@@ -65,7 +65,7 @@ export function About() {
         {/* Affiliations */}
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
-          className="flex flex-wrap items-center gap-3 mb-16"
+          className="flex flex-wrap items-center gap-3"
         >
           <span className="text-sm text-muted-foreground mr-2">Currently working with</span>
           {["ABA Bank", "SEA Observatory", "IT Academy STEP", "Future.bit Academy"].map(org => (
@@ -73,42 +73,6 @@ export function About() {
               {org}
             </span>
           ))}
-        </motion.div>
-
-        {/* Testimonials */}
-        <motion.div
-          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeUp}
-        >
-          <span className="text-xs font-semibold text-primary uppercase tracking-[0.15em] block mb-8">What colleagues say</span>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-            {/* Kieran Glover */}
-            <div className="bg-card border border-border/60 rounded-2xl p-8 flex flex-col">
-              <p className="font-serif italic text-foreground/80 text-base leading-relaxed mb-6 flex-1">
-                "Theara has a great knowledge of UX/UI design and has demonstrated exceptional skills in creating intuitive, user-centered designs for a variety of projects. He has a deep understanding of user-experience principles, a solid understanding of web development and a keen eye for design aesthetics, resulting in designs that are both functional and aesthetically pleasing. He was constantly seeking new and innovative ways to improve his skills and staying up-to-date with the latest industry trends."
-              </p>
-              <div className="flex items-center gap-3 pt-5 border-t border-border/40">
-                <div>
-                  <div className="font-semibold text-foreground text-sm">Kieran Glover</div>
-                  <div className="text-muted-foreground text-xs mt-0.5">Business Advisor, Cambodia · Managed Kim directly at Mäd</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Him Serey */}
-            <div className="bg-card border border-border/60 rounded-2xl p-8 flex flex-col">
-              <p className="font-serif italic text-foreground/80 text-base leading-relaxed mb-6 flex-1">
-                "I know Mr. Theara is a hardworking, intelligent, thorough and insightful and open minded team member in our firm. His strong relationships with peers, management team and all levels of staff were key to lead him more productive in his job. He was an asset for our company."
-              </p>
-              <div className="flex items-center gap-3 pt-5 border-t border-border/40">
-                <div>
-                  <div className="font-semibold text-foreground text-sm">Him Serey</div>
-                  <div className="text-muted-foreground text-xs mt-0.5">Senior Group Head, HR & Compliance · University Lecturer · Senior to Kim</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
         </motion.div>
 
       </div>

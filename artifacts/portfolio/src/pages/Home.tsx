@@ -6,6 +6,7 @@ import { Work } from "@/components/sections/Work";
 import { Research } from "@/components/sections/Research";
 import { Writing } from "@/components/sections/Writing";
 import { Community } from "@/components/sections/Community";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Connect } from "@/components/sections/Connect";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <Research />
         <Writing />
         <Community />
+        <Testimonials />
         <Connect />
       </main>
 
