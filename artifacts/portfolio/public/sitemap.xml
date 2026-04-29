@@ -4,31 +4,31 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://kimtheara.com/</loc>
+    <loc>https://kimtheara.vercel.app/</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kimtheara.com/#work</loc>
+    <loc>https://kimtheara.vercel.app/#work</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kimtheara.com/#research</loc>
+    <loc>https://kimtheara.vercel.app/#research</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kimtheara.com/#writing</loc>
+    <loc>https://kimtheara.vercel.app/#writing</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kimtheara.com/#connect</loc>
+    <loc>https://kimtheara.vercel.app/#connect</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
