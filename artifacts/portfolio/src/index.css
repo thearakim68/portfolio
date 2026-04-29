@@ -62,7 +62,7 @@
   --popover-foreground: 0 0% 7%;
   --popover-border: 35 20% 86%;
   
-  --primary: 15 58% 50%;    /* #C85438 Terracotta */
+  --primary: 15 60% 43%;    /* #AF4D2C Terracotta — darkened for WCAG AA contrast */
   --primary-foreground: 40 20% 98%;
   
   --secondary: 35 20% 86%;  /* #E8E2DA Border/Secondary */
@@ -97,7 +97,7 @@
   --card-foreground: 0 0% 7%;
   --popover: 40 20% 98%;
   --popover-foreground: 0 0% 7%;
-  --primary: 15 58% 50%;    
+  --primary: 15 60% 43%;
   --primary-foreground: 40 20% 98%;
   --secondary: 35 20% 86%;  
   --secondary-foreground: 0 0% 7%;

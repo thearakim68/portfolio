@@ -31,7 +31,7 @@ export function Footer() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-[#6B6860] hover:text-[#FAFAF8] transition-colors"
+                className="text-[#9A9490] hover:text-[#FAFAF8] transition-colors"
               >
                 {link.name}
               </a>
@@ -40,7 +40,7 @@ export function Footer() {
         </div>
 
         {/* Bottom row — copyright + socials */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-sm text-[#6B6860]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-sm text-[#9A9490]">
           <div>© {new Date().getFullYear()} Kim Theara. All rights reserved.</div>
 
           <div className="flex items-center gap-6">
