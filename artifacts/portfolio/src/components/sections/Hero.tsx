@@ -73,6 +73,7 @@ export function Hero() {
               <MagneticElement className="w-full sm:w-auto">
                 <a
                   href="#work"
+                  onClick={(e) => { e.preventDefault(); document.querySelector("#work")?.scrollIntoView({ behavior: "smooth" }); }}
                   className="w-full sm:w-auto px-6 py-3.5 bg-primary text-primary-foreground font-medium rounded-xl shadow-lg shadow-primary/25 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2 group"
                 >
                   View My Work
@@ -84,6 +85,7 @@ export function Hero() {
               <MagneticElement className="w-full sm:w-auto">
                 <a
                   href="#writing"
+                  onClick={(e) => { e.preventDefault(); document.querySelector("#writing")?.scrollIntoView({ behavior: "smooth" }); }}
                   className="w-full sm:w-auto px-6 py-3.5 bg-transparent border border-border text-foreground font-medium rounded-xl hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   My Article

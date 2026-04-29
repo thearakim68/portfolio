@@ -2,6 +2,19 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+function smoothScrollTo(href: string) {
+  if (href === "#top") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+  const target = document.querySelector(href);
+  if (target) {
+    const navHeight = 80;
+    const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+}
+
 export function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -50,8 +63,9 @@ export function NavBar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
-          <a 
-            href="#top" 
+          <a
+            href="#top"
+            onClick={(e) => { e.preventDefault(); smoothScrollTo("#top"); }}
             className="font-serif text-xl font-bold text-foreground tracking-tight hover:text-primary transition-colors"
           >
             Kim Theara
@@ -63,6 +77,7 @@ export function NavBar() {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => { e.preventDefault(); smoothScrollTo(link.href); }}
                 className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
               >
                 {link.name}
@@ -105,7 +120,7 @@ export function NavBar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); smoothScrollTo(link.href); }}
                   className="font-serif text-4xl text-foreground hover:text-primary transition-colors"
                 >
                   {link.name}
